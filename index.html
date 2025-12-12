@@ -42,6 +42,7 @@
             border-radius: 5px;
             position: relative;
             border: 1px solid #d4c5a9;
+            min-height: 80vh;
         }
 
         /* Scroll Edges Effect */
@@ -148,17 +149,48 @@
             }
         }
     </style>
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/"
   }
 }
 </script>
 </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<body>
+    <div class="ancient-scroll">
+        <select id="languageSelector" class="lang-switch" aria-label="Select Language">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+        </select>
+
+        <div class="bismillah animate-on-scroll">﷽</div>
+        
+        <h1 id="title" class="animate-on-scroll"></h1>
+        
+        <p id="intro" class="animate-on-scroll"></p>
+
+        <div class="divider animate-on-scroll">✦</div>
+
+        <h2 id="subtitle1" class="animate-on-scroll"></h2>
+        <p id="part1" class="animate-on-scroll"></p>
+
+        <div class="divider animate-on-scroll">✦</div>
+
+        <h2 id="subtitle2" class="animate-on-scroll"></h2>
+        <p id="part2" class="animate-on-scroll"></p>
+        <p id="part3" class="animate-on-scroll"></p>
+
+        <div class="divider animate-on-scroll">✦</div>
+
+        <h2 id="subtitle3" class="animate-on-scroll"></h2>
+        <p id="conclusion" class="animate-on-scroll"></p>
+        
+        <p id="footer" class="animate-on-scroll" style="text-align: center; font-size: 0.9rem; margin-top: 50px; opacity: 0.7; font-style: italic;">
+        </p>
+    </div>
+</body>
 </html>
