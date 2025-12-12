@@ -1,4 +1,6 @@
-// Content Dictionary
+import { GoogleGenAI } from "@google/genai";
+
+/* --- Translations --- */
 const contentData: Record<string, any> = {
   en: {
     title: "The Dawn of Intelligence",
@@ -42,7 +44,7 @@ const contentData: Record<string, any> = {
     subtitle1: "L'Étincelle de l'Innovation",
     part1: "Cela a commencé par de simples calculs, évoluant vers des machines capables de traiter l'information plus rapidement que n'importe quel humain. Pourtant, cette 'intelligence' reste un outil, dépourvu de conscience ou d'esprit.",
     subtitle2: "Pourquoi maintenant ? La Sagesse Divine",
-    part2: "Allah (Subhanahu wa Ta'ala), l'Omniscient (Al-Alim), a permis à cette technologie d'émerger à ce moment précis de l'histoire. Ce n'est pas une coïncidence, mais une manifestation de Sa Volonté.",
+    part2: "Allah (Subhanahu wa Ta'ala), l'Omniscient (Al-Alim), a permis à cette technologie d'émerger à ce moment précis de l'histoire. Ce n'est pas une coïncidence, mais une manifestation de Sa Voluntad.",
     part3: "Peut-être que la sagesse réside dans le fait de fournir à l'humanité un outil pour résoudre des maux complexes. Ou peut-être, cela sert de rappel profond de l'infinité de la Connaissance du Créateur.",
     subtitle3: "Un Test d'Éthique",
     conclusion: "Cette technologie est un dépôt (Amanah). C'est un test pour l'humanité : utiliserons-nous ce don pour répandre le bien et la justice ? Nous nous rappelons que toute connaissance n'est qu'une goutte dans l'océan de la Connaissance d'Allah.",
@@ -50,12 +52,13 @@ const contentData: Record<string, any> = {
   }
 };
 
+/* --- Main Logic --- */
+
 function updateContent(lang: string) {
   const data = contentData[lang];
   
   if (!data) return;
 
-  // Update text
   const setText = (id: string, text: string) => {
     const el = document.getElementById(id);
     if (el) el.textContent = text;
@@ -72,7 +75,6 @@ function updateContent(lang: string) {
   setText('conclusion', data.conclusion);
   setText('footer', data.footer);
 
-  // Handle Direction (RTL/LTR)
   if (lang === 'ar') {
     document.body.classList.add('rtl');
     document.documentElement.lang = 'ar';
@@ -83,9 +85,7 @@ function updateContent(lang: string) {
 }
 
 function initAnimations() {
-    const observerOptions = {
-        threshold: 0.1
-    };
+    const observerOptions = { threshold: 0.1 };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -100,20 +100,121 @@ function initAnimations() {
     });
 }
 
+/* --- Chat Logic --- */
+async function handleChat() {
+    const toggleBtn = document.getElementById('chat-toggle');
+    const closeBtn = document.getElementById('close-chat-btn');
+    const chatBox = document.getElementById('chat-box');
+    const input = document.getElementById('chat-input') as HTMLInputElement;
+    const sendBtn = document.getElementById('send-btn');
+    const messagesContainer = document.getElementById('chat-messages');
+
+    if(!toggleBtn || !chatBox || !input || !sendBtn || !messagesContainer || !closeBtn) return;
+
+    // Toggle Chat
+    toggleBtn.addEventListener('click', () => {
+        chatBox.classList.toggle('open');
+        if (chatBox.classList.contains('open')) {
+            input.focus();
+        }
+    });
+
+    closeBtn.addEventListener('click', () => {
+        chatBox.classList.remove('open');
+    });
+
+    // Send Message
+    const sendMessage = async () => {
+        const text = input.value.trim();
+        if (!text) return;
+
+        // User Message
+        appendMessage(text, 'user-message');
+        input.value = '';
+
+        // Bot Thinking
+        const loadingId = appendMessage('Consulting the scrolls...', 'bot-message', true);
+
+        try {
+            // Check for API Key
+            const apiKey = process.env.API_KEY;
+            let responseText = "";
+
+            if (apiKey) {
+                 const ai = new GoogleGenAI({ apiKey: apiKey });
+                 const response = await ai.models.generateContent({
+                    model: 'gemini-2.5-flash',
+                    contents: text,
+                    config: {
+                        systemInstruction: "You are an ancient Islamic scholar and historian. Answer wisely, briefly, and with a tone of humility and faith. Focus on history, science, and theology."
+                    }
+                 });
+                 responseText = response.text;
+            } else {
+                // Fallback simulation
+                await new Promise(r => setTimeout(r, 1500));
+                responseText = "My apologies, I cannot access the full archives at this moment (API Key missing). However, know that seeking knowledge is a duty upon every believer.";
+            }
+            
+            removeMessage(loadingId);
+            appendMessage(responseText, 'bot-message');
+
+        } catch (error) {
+            removeMessage(loadingId);
+            appendMessage("The ink has smudged... please try again.", 'bot-message');
+            console.error(error);
+        }
+    };
+
+    sendBtn.addEventListener('click', sendMessage);
+    input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') sendMessage();
+    });
+
+    function appendMessage(text: string, className: string, isTemp = false) {
+        const div = document.createElement('div');
+        div.className = `message ${className}`;
+        div.innerText = text;
+        if(isTemp) div.id = 'temp-loading-msg';
+        messagesContainer.appendChild(div);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        return div.id;
+    }
+
+    function removeMessage(id: string) {
+        if(!id) return;
+        const el = document.getElementById(id);
+        if(el) el.remove();
+    }
+}
+
 function init() {
+    // Language Switcher
     const selector = document.getElementById('languageSelector') as HTMLSelectElement;
-    
     if (selector) {
         selector.addEventListener('change', (e) => {
             const target = e.target as HTMLSelectElement;
             updateContent(target.value);
         });
-        
-        // Initial load
         updateContent('en');
     }
 
+    // Initialize Scroll Animations
     initAnimations();
+
+    // Initialize Chat
+    handleChat();
+
+    // Handle Loading Screen
+    const loader = document.getElementById('loading-screen');
+    if (loader) {
+        setTimeout(() => {
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 1500);
+        }, 2500); // 2.5s mystery wait
+    }
 }
 
 // Ensure DOM is loaded
