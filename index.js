@@ -114,26 +114,12 @@ function getApiKey() {
 
 /* --- Chat Logic --- */
 function handleChat() {
-    const toggleBtn = document.getElementById('chat-toggle');
-    const closeBtn = document.getElementById('close-chat-btn');
-    const chatBox = document.getElementById('chat-box');
+    // Note: Toggle and Close buttons are removed/disabled for sticky mode
     const input = document.getElementById('chat-input');
     const sendBtn = document.getElementById('send-btn');
     const messagesContainer = document.getElementById('chat-messages');
 
-    if(!toggleBtn || !chatBox || !input || !sendBtn || !messagesContainer || !closeBtn) return;
-
-    // Toggle Chat
-    toggleBtn.addEventListener('click', () => {
-        chatBox.classList.toggle('open');
-        if (chatBox.classList.contains('open')) {
-            input.focus();
-        }
-    });
-
-    closeBtn.addEventListener('click', () => {
-        chatBox.classList.remove('open');
-    });
+    if(!input || !sendBtn || !messagesContainer) return;
 
     // Send Message
     const sendMessage = async () => {
@@ -149,7 +135,6 @@ function handleChat() {
 
         try {
             // Dynamic import to avoid top-level blocking
-            // This ensures the rest of the site works even if API client fails to load
             const { GoogleGenAI } = await import("@google/genai");
             
             const apiKey = getApiKey();
@@ -217,7 +202,7 @@ function init() {
         // Initialize Scroll Animations
         initAnimations();
 
-        // Initialize Chat (non-blocking)
+        // Initialize Chat (Sticky, Always On)
         handleChat();
         
     } catch (e) {
