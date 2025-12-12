@@ -100,18 +100,20 @@ const App: React.FC = () => {
 
   return (
     <>
-      <select 
-        className="lang-switch" 
-        value={lang} 
-        onChange={(e) => setLang(e.target.value)}
-      >
-        <option value="en">English</option>
-        <option value="ar">العربية</option>
-        <option value="es">Español</option>
-        <option value="fr">Français</option>
-      </select>
-
       <div className="ancient-scroll" ref={scrollRef}>
+        {/* Language Switcher moved here */}
+        <select 
+          className="lang-switch" 
+          value={lang} 
+          onChange={(e) => setLang(e.target.value)}
+          aria-label="Select Language"
+        >
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+        </select>
+
         <div className="bismillah animate-on-scroll">﷽</div>
         
         <h1 className="animate-on-scroll">{t.title}</h1>

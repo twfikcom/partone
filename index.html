@@ -59,18 +59,27 @@
 
         /* Language Switcher */
         .lang-switch {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background: var(--paper-bg);
-            padding: 10px;
+            display: block;
+            margin: 0 auto 30px auto;
+            background: transparent;
+            padding: 8px 12px;
             border: 1px solid var(--accent-color);
             border-radius: 4px;
             font-family: 'Cinzel', serif;
             cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
             color: var(--ink-color);
+            font-size: 0.9rem;
+            text-align: center;
+            width: fit-content;
+        }
+        
+        .lang-switch:hover {
+            background: rgba(139, 69, 19, 0.1);
+        }
+
+        .lang-switch:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.2);
         }
 
         /* Typography */
