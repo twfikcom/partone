@@ -1,4 +1,5 @@
-import { GoogleGenAI } from "@google/genai";
+// Removed top-level import to prevent blocking page load
+// import { GoogleGenAI } from "@google/genai"; 
 
 /* --- Translations --- */
 const contentData = {
@@ -100,6 +101,17 @@ function initAnimations() {
     });
 }
 
+function getApiKey() {
+    try {
+        if (typeof process !== 'undefined' && process.env) {
+            return process.env.API_KEY;
+        }
+    } catch (e) {
+        // Ignore errors in environments where process is not defined
+    }
+    return null;
+}
+
 /* --- Chat Logic --- */
 function handleChat() {
     const toggleBtn = document.getElementById('chat-toggle');
@@ -136,8 +148,11 @@ function handleChat() {
         const loadingId = appendMessage('Consulting the scrolls...', 'bot-message', true);
 
         try {
-            // Check for API Key safely in browser environment
-            const apiKey = (typeof process !== 'undefined' && process.env) ? process.env.API_KEY : null;
+            // Dynamic import to avoid top-level blocking
+            // This ensures the rest of the site works even if API client fails to load
+            const { GoogleGenAI } = await import("@google/genai");
+            
+            const apiKey = getApiKey();
             let responseText = "";
 
             if (apiKey) {
@@ -189,30 +204,36 @@ function handleChat() {
 }
 
 function init() {
-    // Language Switcher
-    const selector = document.getElementById('languageSelector');
-    if (selector) {
-        selector.addEventListener('change', (e) => {
-            updateContent(e.target.value);
-        });
-        updateContent('en');
-    }
+    try {
+        // Initialize Core Content
+        const selector = document.getElementById('languageSelector');
+        if (selector) {
+            selector.addEventListener('change', (e) => {
+                updateContent(e.target.value);
+            });
+            updateContent('en');
+        }
 
-    // Initialize Scroll Animations
-    initAnimations();
+        // Initialize Scroll Animations
+        initAnimations();
 
-    // Initialize Chat
-    handleChat();
-
-    // Handle Loading Screen
-    const loader = document.getElementById('loading-screen');
-    if (loader) {
-        setTimeout(() => {
-            loader.style.opacity = '0';
+        // Initialize Chat (non-blocking)
+        handleChat();
+        
+    } catch (e) {
+        console.error("Initialization error:", e);
+    } finally {
+        // Hide Loading Screen ALWAYS
+        const loader = document.getElementById('loading-screen');
+        if (loader) {
+            // Wait a moment for mystery effect, then fade out
             setTimeout(() => {
-                loader.style.display = 'none';
-            }, 1500);
-        }, 2500); // 2.5s mystery wait
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 1500);
+            }, 2500);
+        }
     }
 }
 
