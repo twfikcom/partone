@@ -1,6 +1,3 @@
-// Removed top-level import to prevent blocking page load
-// import { GoogleGenAI } from "@google/genai"; 
-
 /* --- Translations --- */
 const contentData = {
   en: {
@@ -101,93 +98,6 @@ function initAnimations() {
     });
 }
 
-function getApiKey() {
-    try {
-        if (typeof process !== 'undefined' && process.env) {
-            return process.env.API_KEY;
-        }
-    } catch (e) {
-        // Ignore errors in environments where process is not defined
-    }
-    return null;
-}
-
-/* --- Chat Logic --- */
-function handleChat() {
-    // Note: Toggle and Close buttons are removed/disabled for sticky mode
-    const input = document.getElementById('chat-input');
-    const sendBtn = document.getElementById('send-btn');
-    const messagesContainer = document.getElementById('chat-messages');
-
-    if(!input || !sendBtn || !messagesContainer) return;
-
-    // Send Message
-    const sendMessage = async () => {
-        const text = input.value.trim();
-        if (!text) return;
-
-        // User Message
-        appendMessage(text, 'user-message');
-        input.value = '';
-
-        // Bot Thinking
-        const loadingId = appendMessage('Consulting the scrolls...', 'bot-message', true);
-
-        try {
-            // Dynamic import to avoid top-level blocking
-            const { GoogleGenAI } = await import("@google/genai");
-            
-            const apiKey = getApiKey();
-            let responseText = "";
-
-            if (apiKey) {
-                 const ai = new GoogleGenAI({ apiKey: apiKey });
-                 const response = await ai.models.generateContent({
-                    model: 'gemini-2.5-flash',
-                    contents: text,
-                    config: {
-                        systemInstruction: "You are an ancient Islamic scholar and historian. Answer wisely, briefly, and with a tone of humility and faith. Focus on history, science, and theology."
-                    }
-                 });
-                 responseText = response.text;
-            } else {
-                // Fallback simulation if key is missing
-                await new Promise(r => setTimeout(r, 1500));
-                responseText = "My apologies, I cannot access the full archives at this moment (API Key missing). However, know that seeking knowledge is a duty upon every believer.";
-            }
-            
-            removeMessage(loadingId);
-            appendMessage(responseText, 'bot-message');
-
-        } catch (error) {
-            removeMessage(loadingId);
-            appendMessage("The ink has smudged... please try again.", 'bot-message');
-            console.error(error);
-        }
-    };
-
-    sendBtn.addEventListener('click', sendMessage);
-    input.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') sendMessage();
-    });
-
-    function appendMessage(text, className, isTemp = false) {
-        const div = document.createElement('div');
-        div.className = `message ${className}`;
-        div.innerText = text;
-        if(isTemp) div.id = 'temp-loading-msg';
-        messagesContainer.appendChild(div);
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
-        return div.id;
-    }
-
-    function removeMessage(id) {
-        if(!id) return;
-        const el = document.getElementById(id);
-        if(el) el.remove();
-    }
-}
-
 function init() {
     try {
         // Initialize Core Content
@@ -201,9 +111,6 @@ function init() {
 
         // Initialize Scroll Animations
         initAnimations();
-
-        // Initialize Chat (Sticky, Always On)
-        handleChat();
         
     } catch (e) {
         console.error("Initialization error:", e);
