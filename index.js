@@ -42,12 +42,6 @@ const contentData = {
     c4_part2: "This malicious intent to blur the lines between creation and manufacturing must stop immediately. It is a corruption that must not spread. We must stand firm against this trend and advocate for technology that respects the boundaries of the Divine.",
     c4_footer: "\"Say: He is Allah, the One.\"",
 
-    // Contact
-    contact_title: "Contact Us",
-    contact_text: "We value your reflections and inquiries. For any questions or communications regarding The Wisdom Behind AI, please reach out to us directly.",
-    footer_contact_link: "Contact Us",
-    btn_back: "Back",
-
     // Buttons
     btn_to_c2: "Open Chapter 2",
     btn_c2_to_c1: "Return to Chapter 1",
@@ -97,12 +91,6 @@ const contentData = {
     c4_subtitle2: "وقف هذا العبث",
     c4_part2: "هذه النية الخبيثة لطمس الخط الفاصل بين الخلق والصناعة لابد أن تتوقف فوراً، ويجب ألا تنتشر. علينا أن نقف بحزم ضد هذا الاتجاه وأن ندعو لتقنية تحترم حدود الله.",
     c4_footer: "\"قُلْ هُوَ اللَّهُ أَحَدٌ\"",
-
-    // Contact
-    contact_title: "اتصل بنا",
-    contact_text: "نقدر تأملاتكم واستفساراتكم. لأي أسئلة أو تواصل بخصوص هذا العمل، يرجى التواصل معنا مباشرة.",
-    footer_contact_link: "اتصل بنا",
-    btn_back: "عودة",
 
     // Buttons
     btn_to_c2: "افتح الفصل الثاني",
@@ -154,12 +142,6 @@ const contentData = {
     c4_part2: "Esta intención maliciosa de borrar las líneas entre la creación y la fabricación debe detenerse inmediatamente. Es una corrupción que no debe extenderse. Debemos mantenernos firmes contra esta tendencia.",
     c4_footer: "\"Di: Él es Allah, el Uno.\"",
 
-    // Contact
-    contact_title: "Contáctenos",
-    contact_text: "Valoramos sus reflexiones y consultas. Para cualquier pregunta o comunicación relacionada con este trabajo, contáctenos directamente.",
-    footer_contact_link: "Contáctenos",
-    btn_back: "Volver",
-
     // Buttons
     btn_to_c2: "Abrir Capítulo 2",
     btn_c2_to_c1: "Volver al Capítulo 1",
@@ -210,12 +192,6 @@ const contentData = {
     c4_part2: "Cette intention malveillante de brouiller les lignes entre la création et la fabrication doit cesser immédiatement. C'est une corruption qui ne doit pas se répandre. Nous devons rester fermes face à cette tendance.",
     c4_footer: "\"Dis : Il est Allah, l'Unique.\"",
 
-    // Contact
-    contact_title: "Contactez-nous",
-    contact_text: "Nous apprécions vos réflexions et vos demandes. Pour toute question ou communication concernant ce travail, veuillez nous contacter directement.",
-    footer_contact_link: "Contactez-nous",
-    btn_back: "Retour",
-
     // Buttons
     btn_to_c2: "Ouvrir le Chapitre 2",
     btn_c2_to_c1: "Retourner au Chapitre 1",
@@ -227,8 +203,6 @@ const contentData = {
 };
 
 /* --- Main Logic --- */
-
-let lastActiveChapterId = 'chapter-1';
 
 function updateContent(lang) {
   const data = contentData[lang];
@@ -281,19 +255,13 @@ function updateContent(lang) {
   setText('c4-part2', data.c4_part2);
   setText('c4-footer', data.c4_footer);
 
-  // Contact Content
-  setText('contact-title', data.contact_title);
-  setText('contact-text', data.contact_text);
-  setText('footer-contact-link', data.footer_contact_link);
-
-  // Buttons
+  // Buttons - Selection by ID+span ensures we target the text part
   const btnC2 = document.querySelector('#btn-to-c2 span');
   const btnC2Back = document.querySelector('#btn-c2-to-c1 span');
   const btnC3 = document.querySelector('#btn-to-c3 span');
   const btnC3Back = document.querySelector('#btn-c3-to-c2 span');
   const btnC4 = document.querySelector('#btn-to-c4 span');
   const btnC4Back = document.querySelector('#btn-c4-to-c3 span');
-  const btnContactBack = document.querySelector('#btn-back-from-contact span');
 
   if(btnC2) btnC2.textContent = data.btn_to_c2;
   if(btnC2Back) btnC2Back.textContent = data.btn_c2_to_c1;
@@ -301,7 +269,6 @@ function updateContent(lang) {
   if(btnC3Back) btnC3Back.textContent = data.btn_c3_to_c2;
   if(btnC4) btnC4.textContent = data.btn_to_c4;
   if(btnC4Back) btnC4Back.textContent = data.btn_c4_to_c3;
-  if(btnContactBack) btnContactBack.textContent = data.btn_back;
 
   if (lang === 'ar') {
     document.body.classList.add('rtl');
@@ -336,26 +303,13 @@ function setupNavigation() {
     const btnToC4 = document.getElementById('btn-to-c4');
     const btnC4toC3 = document.getElementById('btn-c4-to-c3');
     
-    // Contact Nav
-    const btnContactLink = document.getElementById('footer-contact-link');
-    const btnBackFromContact = document.getElementById('btn-back-from-contact');
-    
     const c1 = document.getElementById('chapter-1');
     const c2 = document.getElementById('chapter-2');
     const c3 = document.getElementById('chapter-3');
     const c4 = document.getElementById('chapter-4');
-    const contactChapter = document.getElementById('contact-chapter');
-    const footer = document.querySelector('.global-footer');
 
     // Helper to switch chapters
-    const switchChapter = (hide, show, rememberState = true) => {
-        if(rememberState && hide) {
-             // Store the ID of the chapter we are leaving if it's not the contact page
-             if (hide.id !== 'contact-chapter') {
-                 lastActiveChapterId = hide.id;
-             }
-        }
-
+    const switchChapter = (hide, show) => {
         if(hide) hide.style.display = 'none';
         if(show) {
             show.style.display = 'block';
@@ -374,34 +328,6 @@ function setupNavigation() {
     if (btnC3toC2) btnC3toC2.addEventListener('click', () => switchChapter(c3, c2));
     if (btnToC4) btnToC4.addEventListener('click', () => switchChapter(c3, c4));
     if (btnC4toC3) btnC4toC3.addEventListener('click', () => switchChapter(c4, c3));
-
-    // Handle Contact Link
-    if (btnContactLink) {
-        btnContactLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            // Find current visible chapter
-            const chapters = [c1, c2, c3, c4];
-            let visible = chapters.find(c => c.style.display !== 'none');
-            
-            // If we are already on contact page (unlikely due to UI logic but good to handle), do nothing
-            // Hide visible chapter and show contact
-            if (visible) {
-                 switchChapter(visible, contactChapter);
-                 // Hide footer on contact page? Or keep it? 
-                 // Usually contact link on contact page is redundant but fine.
-                 footer.style.display = 'none'; // Hide global footer when on contact page
-            }
-        });
-    }
-
-    // Handle Back from Contact
-    if (btnBackFromContact) {
-        btnBackFromContact.addEventListener('click', () => {
-            const lastChapter = document.getElementById(lastActiveChapterId) || c1;
-            switchChapter(contactChapter, lastChapter, false);
-            footer.style.display = 'flex'; // Show global footer again
-        });
-    }
 }
 
 function init() {

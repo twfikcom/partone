@@ -5,6 +5,10 @@
     --shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -12,6 +16,7 @@ body {
     background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
     font-family: 'Cormorant Garamond', serif;
     color: var(--ink-color);
+    width: 100%;
     overflow-x: hidden;
     transition: all 0.5s ease;
 }
@@ -74,6 +79,7 @@ body {
     position: relative;
     border: 1px solid #d4c5a9;
     min-height: 80vh;
+    width: 90%;
 }
 
 .ancient-scroll::before, .ancient-scroll::after {
@@ -169,6 +175,8 @@ p {
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    /* Ensure button text doesn't overflow */
+    max-width: 100%;
 }
 
 .nav-btn::before {
@@ -201,21 +209,25 @@ p {
     border-top: 1px solid rgba(139, 69, 19, 0.2);
     padding-top: 15px;
     display: flex;
-    justify-content: flex-start; /* Left aligned by default */
+    /* In both LTR and RTL, we want this on the physical left */
+    /* LTR: flex-start = Left */
+    /* RTL: flex-end = Left */
+    justify-content: flex-start;
 }
 
-.global-footer a {
-    font-size: 0.9rem;
-    color: var(--ink-color);
-    text-decoration: none;
+/* Force left alignment physically even in RTL if requested */
+body.rtl .global-footer {
+    justify-content: flex-end; 
+    direction: ltr; /* Keeps the email format correct and aligns left */
+}
+
+.footer-email {
     font-family: 'Cormorant Garamond', serif;
-    opacity: 0.6;
-    transition: opacity 0.3s ease;
-}
-
-.global-footer a:hover {
-    opacity: 1;
-    text-decoration: underline;
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    opacity: 0.7;
+    letter-spacing: 0.5px;
 }
 
 /* RTL Specifics */
@@ -228,11 +240,6 @@ body.rtl h1, body.rtl h2 {
 body.rtl p {
     font-family: 'Amiri', serif;
     font-size: 1.4rem;
-}
-
-/* Ensure footer logic aligns with direction */
-body.rtl .global-footer {
-    justify-content: flex-end; /* Physical left for RTL is the end */
 }
 
 /* Animations */
