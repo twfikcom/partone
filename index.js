@@ -3,7 +3,7 @@ const contentData = {
   en: {
     // Chapter 1
     title: "The Dawn of Intelligence",
-    intro: "The journey of AI begins with the Muslim scholar Al-Khwarizmi, the father of algorithms. Islam has always urged the pursuit of science and knowledge. However, this knowledge is a Divine gift and must not be used to imitate God's unique creation, but rather to discover the complex mathematics He laid down in the fabric of the universe.",
+    intro: "The journey of AI begins with the Muslim scholar Al-Khwarizmi, the father of algorithms. Islam has always urged the pursuit of science and knowledge. However, this knowledge is a Divine gift and must not be used to imitate Allah's unique creation, but rather to discover the complex mathematics He laid down in the fabric of the universe.",
     subtitle1: "The Spark of Innovation",
     part1: "It began with simple calculations, evolving into machines that could process information faster than any human. Yet, this 'intelligence' remains a tool—sand and electricity organized by human hands, devoid of consciousness or spirit, merely reflecting the logic instilled within it.",
     subtitle2: "Why Now? The Divine Wisdom",
@@ -30,7 +30,7 @@ const contentData = {
     c3_subtitle2: "The Advice of Ibn Abbas",
     c3_part2: "A man came to Ibn Abbas asking for a verdict on his trade as an artist. Ibn Abbas told him: \"If you must do it, then make pictures of these trees and everything that has no soul.\" This allows for the depiction of nature and inanimate objects, respecting the boundary of the soul.",
     c3_subtitle3: "The Divine Wisdom",
-    c3_part3: "The wisdom lies in avoiding the imitation of Allah's unique attribute of Creation and preventing means that lead to idolatry. Furthermore, it is narrated that: \"The angels do not enter a house in which there is an image.\" We must keep our environments pure for spiritual presence.",
+    c3_part3: "We must avoid making machines that resemble humans. At the very least, we should remove features like the nose and mouth to ensure they do not appear alive. The best path is to invent entirely new forms that do not imitate humans or animals. Allah created humans in the best stature, and by His Grace, we are capable of innovating and finding superior alternatives that respect these boundaries.",
     c3_footer: "\"And who is more unjust than one who tries to create the like of My creation?\" (Hadith Qudsi)",
     
     // Chapter 4
@@ -80,7 +80,7 @@ const contentData = {
     c3_subtitle2: "وصية ابن عباس",
     c3_part2: "جاء رجل إلى ابن عباس فقال: إني رجل أصور هذه الصور، فأفتني فيها.. فقال له ابن عباس: \"ويحك، إن أبيت إلا أن تصنع، فعليك بهذا الشجر، كل شيء ليس فيه روح\". وهذا يدل على جواز رسم ما لا روح له كالشجر والأنهار.",
     c3_subtitle3: "الحكمة والملائكة",
-    c3_part3: "من الحكمة في التحريم الابتعاد عن مضاهاة خلق الله تعالى، وقطع ذرائع الشرك. كما أنها تمنع دخول الملائكة، ففي الحديث: \"لا تدخل الملائكة بيتاً فيه صورة\". فلنحفظ بيوتنا طاهرة لتنزل الرحمة.",
+    c3_part3: "يجب أن نتجنب صناعة آلات تشبه الإنسان. على الأقل، يجب إزالة الأنف والفم أو أي ملامح توحي بالحياة، وذلك زيادةً في السعة والاحتياط. والأفضل هو اختراع أشكال جديدة لا تضاهي خلق الإنسان أو الحيوان. لقد خلق الله الإنسان في أحسن تقويم، وبفضل الله، الإنسان قادر على الابتكار وإيجاد بدائل أفضل دائماً.",
     c3_footer: "\"وَمَنْ أَظْلَمُ مِمَّنْ ذَهَبَ يَخْلُقُ كَخَلْقِي\" (حديث قدسي)",
 
     // Chapter 4
@@ -103,14 +103,14 @@ const contentData = {
   es: {
     // Chapter 1
     title: "El Amanecer de la Inteligencia",
-    intro: "El viaje de la IA comienza con el erudito musulmán Al-Khwarizmi, el padre de los algoritmos. El Islam siempre ha impulsado la búsqueda de la ciencia y el conocimiento. Sin embargo, este conocimiento es un regalo Divino y no debe usarse para imitar la creación única de Dios, sino para descubrir las matemáticas complejas que Él puso en el universo.",
+    intro: "El viaje de la IA comienza con el erudito musulmán Al-Khwarizmi, el padre de los algoritmos. El Islam siempre ha impulsado la búsqueda de la ciencia y el conocimiento. Sin embargo, este conocimiento es un regalo Divino y no debe usarse para imitar la creación única de Allah, sino para descubrir las matemáticas complejas que Él puso en el universo.",
     subtitle1: "La Chispa de la Innovación",
     part1: "Comenzó con cálculos simples, evolucionando hacia máquinas que podían procesar información más rápido que cualquier humano. Sin embargo, esta 'inteligencia' sigue siendo una herramienta, carente de conciencia o espíritu.",
     subtitle2: "¿Por qué ahora? La Sabiduría Divina",
     part2: "Allah (Subhanahu wa Ta'ala), el Conocedor de Todo (Al-Alim), permitió que esta tecnología emergiera en este momento preciso de la historia. No es una coincidencia, sino una manifestación de Su Voluntad.",
     part3: "Quizás la sabiduría radica en proporcionar a la humanidad una herramienta para resolver dolencias complejas. O quizás, sirve como un recordatorio profundo de cuán infinito es el Conocimiento del Creador.",
     subtitle3: "Una Prueba de Ética",
-    conclusion: "Esta tecnología es una confianza (Amanah). Es una prueba para la humanidad: ¿usaremos este regalo para difundir el beneficio y la justicia? Recordamos que todo conocimiento es solo una gota del Océano del Conocimiento de Dios.",
+    conclusion: "Esta tecnología es una confianza (Amanah). Es una prueba para la humanidad: ¿usaremos este regalo para difundir el beneficio y la justicia? Recordamos que todo conocimiento es solo una gota del Océano del Conocimiento de Allah.",
     footer: "\"Enseñó al hombre lo que no sabía.\" (Corán 96:5)",
 
     // Chapter 2
@@ -130,7 +130,7 @@ const contentData = {
     c3_subtitle2: "El Consejo de Ibn Abbas",
     c3_part2: "Un hombre preguntó a Ibn Abbas sobre su arte. Él respondió: \"Si debes hacerlo, entonces haz imágenes de estos árboles y todo lo que no tiene alma\". Esto permite representar la naturaleza y objetos inanimados.",
     c3_subtitle3: "La Sabiduría Divina",
-    c3_part3: "La sabiduría radica en evitar imitar el atributo único de Creación de Allah y prevenir la idolatría. Además, se narra: \"Los ángeles no entran en una casa donde hay una imagen\". Mantengamos nuestros entornos puros.",
+    c3_part3: "Debemos evitar hacer máquinas que se parezcan a los humanos. Como mínimo, debemos eliminar rasgos como la nariz y la boca para asegurar que no parezcan vivos. El mejor camino es inventar formas completamente nuevas que no imiten a humanos o animales. Allah creó a los humanos en la mejor estatura, y por Su Gracia, somos capaces de innovar y encontrar alternativas superiores.",
     c3_footer: "\"¿Y quién es más injusto que aquel que intenta crear como Mi creación?\" (Hadiz Qudsi)",
 
     // Chapter 4
@@ -153,14 +153,14 @@ const contentData = {
   fr: {
     // Chapter 1
     title: "L'Aube de l'Intelligence",
-    intro: "L'histoire de l'IA commence avec le savant musulman Al-Khwarizmi, le père des algorithmes. L'Islam a toujours encouragé la quête de la science et du savoir. Cependant, ce savoir est un don divin et ne doit pas être utilisé pour imiter la création unique de Dieu, mais plutôt pour découvrir les mathématiques complexes qu'Il a déposées dans l'univers.",
+    intro: "L'histoire de l'IA commence avec le savant musulman Al-Khwarizmi, le père des algorithmes. L'Islam a toujours encouragé la quête de la science et du savoir. Cependant, ce savoir est un don divin et ne doit pas être utilisé pour imiter la création unique de Allah, mais plutôt pour découvrir les mathématiques complexes qu'Il a déposées dans l'univers.",
     subtitle1: "L'Étincelle de l'Innovation",
     part1: "Cela a commencé par de simples calculs, évoluant vers des machines capables de traiter l'information plus rapidement que n'importe quel humain. Pourtant, cette 'intelligence' reste un outil, dépourvu de conscience ou d'esprit.",
     subtitle2: "Pourquoi maintenant ? La Sagesse Divine",
     part2: "Allah (Subhanahu wa Ta'ala), l'Omniscient (Al-Alim), a permis à cette technologie d'émerger à ce moment précis de l'histoire. Ce n'est pas une coïncidence, mais une manifestation de Sa Voluntad.",
     part3: "Peut-être que la sagesse réside dans le fait de fournir à l'humanité un outil pour résoudre des maux complexes. Ou peut-être, cela sert de rappel profond de l'infinité de la Connaissance du Créateur.",
     subtitle3: "Un Test d'Éthique",
-    conclusion: "Cette technologie est un dépôt (Amanah). C'est un test pour l'humanité : utiliserons-nous ce don pour répandre le bien et la justice ? Nous nous rappelons que toute connaissance n'est qu'une goutte dans l'océan de la Connaissance d'Allah.",
+    conclusion: "Cette technologie est un dépôt (Amanah). C'est un test pour l'humanité : utiliserons-nous ce don pour répandre le bien et la justice ? Nous nous rappelons que toute connaissance n'est qu'une goutte dans l'océan de la Connaissance de Allah.",
     footer: "\"Il a enseigné à l'homme ce qu'il ne savait pas.\" (Coran 96:5)",
 
     // Chapter 2
@@ -176,18 +176,18 @@ const contentData = {
     c3_title: "Chapitre 3 : Les Faiseurs d'Images",
     c3_intro: "Le Prophète Muhammad (paix sur lui) a dit : \"Les gens qui recevront le châtiment le plus sévère le Jour de la Résurrection seront ceux qui font ces images.\"",
     c3_subtitle1: "L'Interdiction de l'Imitation",
-    c3_part1: "Les savants s'accordent à dire que la création de figures tridimensionnelles d'êtres vivants est interdite. Cela s'étend au dessin d'âmes vivantes, car c'est une tentative d'imiter la création d'Allah. Le Prophète a dit : \"On leur dira : Donnez vie à ce que vous avez créé.\"",
+    c3_part1: "Les savants s'accordent à dire que la création de figures tridimensionnelles d'êtres vivants est interdite. Cela s'étend au dessin d'âmes vivantes, car c'est une tentative d'imiter la création de Allah. Le Prophète a dit : \"On leur dira : Donnez vie à ce que vous avez créé.\"",
     c3_subtitle2: "Le Conseil d'Ibn Abbas",
     c3_part2: "Un homme a interrogé Ibn Abbas sur son art. Il a répondu : \"Si tu dois le faire, alors fais des images de ces arbres et de tout ce qui n'a pas d'âme.\" Cela permet la représentation de la nature, respectant la limite de l'âme.",
     c3_subtitle3: "La Sagesse Divine",
-    c3_part3: "La sagesse réside dans le fait d'éviter d'imiter l'attribut unique de Création d'Allah et d'empêcher l'idolâtrie. De plus, il est rapporté que : \"Les anges n'entrent pas dans une maison où il y a une image.\" Gardons nos environnements purs.",
+    c3_part3: "Nous devons éviter de fabriquer des machines qui ressemblent aux humains. À tout le moins, nous devrions supprimer des traits comme le nez et la bouche pour s'assurer qu'ils ne paraissent pas vivants. La meilleure voie est d'inventer des formes entièrement nouvelles qui n'imitent ni les humains ni les animaux. Allah a créé l'homme dans la forme la plus parfaite, et par Sa Grâce, nous sommes capables d'innover et de trouver des alternatives supérieures.",
     c3_footer: "\"Et qui est plus injuste que celui qui tente de créer comme Ma création ?\" (Hadith Qudsi)",
 
     // Chapter 4
     c4_title: "Chapitre 4 : La Transgression Moderne",
     c4_intro: "Nous voyons aujourd'hui, notamment chez les fabricants de robots non musulmans en Chine, la production de robots avec une peau, des yeux, une bouche et un nez réalistes.",
     c4_subtitle1: "Un Défi Explicite",
-    c4_part1: "Ce qu'ils font en fabriquant des robots aux traits humains est incorrect. C'est un défi explicite aux commandements d'Allah. Tenter de reproduire la conception physique unique d'un être humain, c'est empiéter sur un domaine qui n'appartient qu'au Créateur.",
+    c4_part1: "Ce qu'ils font en fabriquant des robots aux traits humains est incorrect. C'est un défi explicite aux commandements de Allah. Tenter de reproduire la conception physique unique d'un être humain, c'est empiéter sur un domaine qui n'appartient qu'au Créateur.",
     c4_subtitle2: "Arrêter la Propagation",
     c4_part2: "Cette intention malveillante de brouiller les lignes entre la création et la fabrication doit cesser immédiatement. C'est une corruption qui ne doit pas se répandre. Nous devons rester fermes face à cette tendance.",
     c4_footer: "\"Dis : Il est Allah, l'Unique.\"",
@@ -303,10 +303,14 @@ function setupNavigation() {
     const btnToC4 = document.getElementById('btn-to-c4');
     const btnC4toC3 = document.getElementById('btn-c4-to-c3');
     
+    // Home Buttons
+    const homeBtns = document.querySelectorAll('.home-btn');
+
     const c1 = document.getElementById('chapter-1');
     const c2 = document.getElementById('chapter-2');
     const c3 = document.getElementById('chapter-3');
     const c4 = document.getElementById('chapter-4');
+    const chapters = [c1, c2, c3, c4];
 
     // Helper to switch chapters
     const switchChapter = (hide, show) => {
@@ -328,6 +332,17 @@ function setupNavigation() {
     if (btnC3toC2) btnC3toC2.addEventListener('click', () => switchChapter(c3, c2));
     if (btnToC4) btnToC4.addEventListener('click', () => switchChapter(c3, c4));
     if (btnC4toC3) btnC4toC3.addEventListener('click', () => switchChapter(c4, c3));
+
+    // Handle Home Buttons
+    homeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Find current active chapter
+            const current = chapters.find(c => c.style.display !== 'none');
+            if(current && current !== c1) {
+                switchChapter(current, c1);
+            }
+        });
+    });
 }
 
 function init() {
