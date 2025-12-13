@@ -146,6 +146,55 @@ p {
     opacity: 0.6;
 }
 
+/* --- Navigation Buttons --- */
+.nav-container {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 12px 30px;
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-color);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.nav-btn:hover {
+    color: var(--paper-bg);
+}
+
+.nav-btn:hover::before {
+    left: 0;
+}
+
+.nav-btn:active {
+    transform: scale(0.98);
+}
+
 /* RTL Specifics */
 body.rtl {
     direction: rtl;
@@ -168,6 +217,16 @@ body.rtl p {
 .visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Chapter Transition */
+.chapter {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @media (max-width: 768px) {
