@@ -29,8 +29,9 @@ const contentData = {
     c3_part1: "Scholars have agreed that creating three-dimensional figures of living beings (having a shadow) is forbidden. This prohibition extends to drawing living souls, as it is an attempt to imitate the creation of Allah. The Prophet said: \"Those who make these images... will be told: Give life to what you created.\"",
     c3_subtitle2: "The Advice of Ibn Abbas",
     c3_part2: "A man came to Ibn Abbas asking for a verdict on his trade as an artist. Ibn Abbas told him: \"If you must do it, then make pictures of these trees and everything that has no soul.\" This allows for the depiction of nature and inanimate objects, respecting the boundary of the soul.",
-    c3_subtitle3: "The Divine Wisdom",
+    c3_subtitle3: "Innovation, Not Imitation",
     c3_part3: "We must avoid making machines that resemble humans. At the very least, we should remove features like the nose and mouth to ensure they do not appear alive. The best path is to invent entirely new forms that do not imitate humans or animals. Allah created humans in the best stature, and by His Grace, we are capable of innovating and finding superior alternatives that respect these boundaries.",
+    c3_note: "Note: Angels do not enter a house in which there are images (statues/figures resembling life).",
     c3_footer: "\"And who is more unjust than one who tries to create the like of My creation?\" (Hadith Qudsi)",
     
     // Chapter 4
@@ -79,8 +80,9 @@ const contentData = {
     c3_part1: "فإن الرسم لذوات الأرواح إذا كان مجسماً (له ظل) حرم بالإجماع، وممن نقل هذا الإجماع النووي. وكذلك الرسم باليد عند جماهير العلماء، لقوله صلى الله عليه وسلم: \"الذين يصنعون هذه الصور يعذبون يوم القيامة، يقال لهم: أحيوا ما خلقتم\".",
     c3_subtitle2: "وصية ابن عباس",
     c3_part2: "جاء رجل إلى ابن عباس فقال: إني رجل أصور هذه الصور، فأفتني فيها.. فقال له ابن عباس: \"ويحك، إن أبيت إلا أن تصنع، فعليك بهذا الشجر، كل شيء ليس فيه روح\". وهذا يدل على جواز رسم ما لا روح له كالشجر والأنهار.",
-    c3_subtitle3: "الحكمة والملائكة",
+    c3_subtitle3: "الابتكار لا المحاكاة",
     c3_part3: "يجب أن نتجنب صناعة آلات تشبه الإنسان. على الأقل، يجب إزالة الأنف والفم أو أي ملامح توحي بالحياة، وذلك زيادةً في السعة والاحتياط. والأفضل هو اختراع أشكال جديدة لا تضاهي خلق الإنسان أو الحيوان. لقد خلق الله الإنسان في أحسن تقويم، وبفضل الله، الإنسان قادر على الابتكار وإيجاد بدائل أفضل دائماً.",
+    c3_note: "تنبيه: الملائكة لا تدخل بيتاً فيه مثل هذه الصور والتماثيل.",
     c3_footer: "\"وَمَنْ أَظْلَمُ مِمَّنْ ذَهَبَ يَخْلُقُ كَخَلْقِي\" (حديث قدسي)",
 
     // Chapter 4
@@ -129,8 +131,9 @@ const contentData = {
     c3_part1: "Los eruditos coinciden en que crear figuras tridimensionales de seres vivos está prohibido. Esto se extiende a dibujar seres con alma, ya que intenta imitar la creación de Allah. El Profeta dijo: \"Se les dirá: Dad vida a lo que habéis creado\".",
     c3_subtitle2: "El Consejo de Ibn Abbas",
     c3_part2: "Un hombre preguntó a Ibn Abbas sobre su arte. Él respondió: \"Si debes hacerlo, entonces haz imágenes de estos árboles y todo lo que no tiene alma\". Esto permite representar la naturaleza y objetos inanimados.",
-    c3_subtitle3: "La Sabiduría Divina",
+    c3_subtitle3: "Innovación, no Imitación",
     c3_part3: "Debemos evitar hacer máquinas que se parezcan a los humanos. Como mínimo, debemos eliminar rasgos como la nariz y la boca para asegurar que no parezcan vivos. El mejor camino es inventar formas completamente nuevas que no imiten a humanos o animales. Allah creó a los humanos en la mejor estatura, y por Su Gracia, somos capaces de innovar y encontrar alternativas superiores.",
+    c3_note: "Nota: Los ángeles no entran en una casa donde hay tales imágenes.",
     c3_footer: "\"¿Y quién es más injusto que aquel que intenta crear como Mi creación?\" (Hadiz Qudsi)",
 
     // Chapter 4
@@ -179,8 +182,9 @@ const contentData = {
     c3_part1: "Les savants s'accordent à dire que la création de figures tridimensionnelles d'êtres vivants est interdite. Cela s'étend au dessin d'âmes vivantes, car c'est une tentative d'imiter la création de Allah. Le Prophète a dit : \"On leur dira : Donnez vie à ce que vous avez créé.\"",
     c3_subtitle2: "Le Conseil d'Ibn Abbas",
     c3_part2: "Un homme a interrogé Ibn Abbas sur son art. Il a répondu : \"Si tu dois le faire, alors fais des images de ces arbres et de tout ce qui n'a pas d'âme.\" Cela permet la représentation de la nature, respectant la limite de l'âme.",
-    c3_subtitle3: "La Sagesse Divine",
+    c3_subtitle3: "L'Innovation, pas l'Imitation",
     c3_part3: "Nous devons éviter de fabriquer des machines qui ressemblent aux humains. À tout le moins, nous devrions supprimer des traits comme le nez et la bouche pour s'assurer qu'ils ne paraissent pas vivants. La meilleure voie est d'inventer des formes entièrement nouvelles qui n'imitent ni les humains ni les animaux. Allah a créé l'homme dans la forme la plus parfaite, et par Sa Grâce, nous sommes capables d'innover et de trouver des alternatives supérieures.",
+    c3_note: "Note : Les anges n'entrent pas dans une maison où il y a de telles images.",
     c3_footer: "\"Et qui est plus injuste que celui qui tente de créer comme Ma création ?\" (Hadith Qudsi)",
 
     // Chapter 4
@@ -244,6 +248,7 @@ function updateContent(lang) {
   setText('c3-part2', data.c3_part2);
   setText('c3-subtitle3', data.c3_subtitle3);
   setText('c3-part3', data.c3_part3);
+  setText('c3-note', data.c3_note);
   setText('c3-footer', data.c3_footer);
 
   // Chapter 4 Content
@@ -303,8 +308,8 @@ function setupNavigation() {
     const btnToC4 = document.getElementById('btn-to-c4');
     const btnC4toC3 = document.getElementById('btn-c4-to-c3');
     
-    // Home Buttons
-    const homeBtns = document.querySelectorAll('.home-btn');
+    // Global Home Button
+    const globalHomeBtn = document.getElementById('global-home-btn');
 
     const c1 = document.getElementById('chapter-1');
     const c2 = document.getElementById('chapter-2');
@@ -318,6 +323,14 @@ function setupNavigation() {
         if(show) {
             show.style.display = 'block';
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Manage Global Home Button Visibility
+            if (show.id === 'chapter-1') {
+                globalHomeBtn.style.display = 'none';
+            } else {
+                globalHomeBtn.style.display = 'block';
+            }
+
             // Re-trigger animations
             show.querySelectorAll('.animate-on-scroll').forEach(el => {
                 el.classList.remove('visible');
@@ -333,16 +346,15 @@ function setupNavigation() {
     if (btnToC4) btnToC4.addEventListener('click', () => switchChapter(c3, c4));
     if (btnC4toC3) btnC4toC3.addEventListener('click', () => switchChapter(c4, c3));
 
-    // Handle Home Buttons
-    homeBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Find current active chapter
+    // Handle Global Home Button
+    if (globalHomeBtn) {
+        globalHomeBtn.addEventListener('click', () => {
             const current = chapters.find(c => c.style.display !== 'none');
             if(current && current !== c1) {
                 switchChapter(current, c1);
             }
         });
-    });
+    }
 }
 
 function init() {

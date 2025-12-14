@@ -108,6 +108,8 @@ body {
     font-size: 0.9rem;
     text-align: center;
     width: fit-content;
+    position: relative;
+    z-index: 200;
 }
 
 .lang-switch:hover {
@@ -206,8 +208,8 @@ p {
 /* --- Home Button --- */
 .home-btn {
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 60px; /* Positioned near language switcher */
+    left: 40px;
     background: transparent;
     border: none;
     color: var(--accent-color);
@@ -238,7 +240,7 @@ body.rtl p {
 /* Move Home button to the right for RTL */
 body.rtl .home-btn {
     left: auto;
-    right: 15px;
+    right: 40px;
 }
 
 /* --- Global Footer --- */
@@ -296,5 +298,14 @@ body.rtl .global-footer {
         width: 95%;
         margin: 20px auto;
         padding: 40px 20px;
+    }
+    
+    .home-btn {
+        top: 20px;
+        left: 20px;
+    }
+    
+    body.rtl .home-btn {
+        right: 20px;
     }
 }
