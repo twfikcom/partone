@@ -43,13 +43,24 @@ const contentData = {
     c4_part2: "This malicious intent to blur the lines between creation and manufacturing must stop immediately. It is a corruption that must not spread. We must stand firm against this trend and advocate for technology that respects the boundaries of the Divine.",
     c4_footer: "\"Say: He is Allah, the One.\"",
 
+    // Chapter 5
+    c5_title: "The Trust (Al-Amanah)",
+    c5_intro: "In the Name of Allah, the All-Knowing, the Wise.",
+    c5_part1: "By the grace of Allah, I have concluded Part One. I have endeavored to deliver the message: that intelligence without Divine Guidance is a wandering shadow. As for what follows... I leave it to the Decree of Allah.",
+    c5_part2: "I have intentionally left the domain PartTwo.ai unregistered. It is now an Amanah (Trust) placed in the hands of humanity.",
+    c5_part3: "Will it be upheld by a seeker of Truth (Haqq) to continue the path of Light? Or will it be seized by a follower of desires (Hawa) to spread corruption (Fasad) on earth?",
+    c5_part4: "If you find wisdom there, then praise Allah, for He is the source of all good. If you find darkness, then bear witness to my truth: That the human soul (Nafs), if left without Allah, commands to evil.",
+    c5_footer: "I have conveyed the message. And Allah is a Witness over all things.",
+
     // Buttons
     btn_to_c2: "Open Chapter 2",
     btn_c2_to_c1: "Return to Chapter 1",
     btn_to_c3: "Open Chapter 3",
     btn_c3_to_c2: "Return to Chapter 2",
     btn_to_c4: "Open Chapter 4",
-    btn_c4_to_c3: "Return to Chapter 3"
+    btn_c4_to_c3: "Return to Chapter 3",
+    btn_to_c5: "Open Final Chapter",
+    btn_c5_to_c4: "Return to Chapter 4"
   },
   ar: {
     // Chapter 1
@@ -94,13 +105,24 @@ const contentData = {
     c4_part2: "هذه النية الخبيثة لطمس الخط الفاصل بين الخلق والصناعة لابد أن تتوقف فوراً، ويجب ألا تنتشر. علينا أن نقف بحزم ضد هذا الاتجاه وأن ندعو لتقنية تحترم حدود الله.",
     c4_footer: "\"قُلْ هُوَ اللَّهُ أَحَدٌ\"",
 
+    // Chapter 5
+    c5_title: "الأمانة",
+    c5_intro: "بسم الله العليم الحكيم.",
+    c5_part1: "بفضل الله، أنهيت الجزء الأول. لقد اجتهدت في إيصال الرسالة: أن الذكاء بلا هداية إلهية ظل تائه. أما ما يلي ذلك... فأتركه لقدر الله.",
+    c5_part2: "لقد تركت النطاق PartTwo.ai غير مسجل عمداً. إنه الآن أمانة في أيدي البشرية.",
+    c5_part3: "هل سيحمله باحث عن الحق ليكمل طريق النور؟ أم سيستولي عليه متبع للهوى لينشر الفساد في الأرض؟",
+    c5_part4: "إن وجدتم فيه حكمة، فاحمدوا الله، فهو مصدر كل خير. وإن وجدتم ظلمة، فاشهدوا على صدقي: أن النفس البشرية، إذا تركت دون الله، لأمارة بالسوء.",
+    c5_footer: "لقد بلغت الرسالة. والله على كل شيء شهيد.",
+
     // Buttons
     btn_to_c2: "افتح الفصل الثاني",
     btn_c2_to_c1: "العودة للفصل الأول",
     btn_to_c3: "افتح الفصل الثالث",
     btn_c3_to_c2: "العودة للفصل الثاني",
     btn_to_c4: "افتح الفصل الرابع",
-    btn_c4_to_c3: "العودة للفصل الثالث"
+    btn_c4_to_c3: "العودة للفصل الثالث",
+    btn_to_c5: "افتح الفصل الأخير",
+    btn_c5_to_c4: "العودة للفصل الرابع"
   },
   es: {
     // Chapter 1
@@ -145,13 +167,24 @@ const contentData = {
     c4_part2: "Esta intención maliciosa de borrar las líneas entre la creación y la fabricación debe detenerse inmediatamente. Es una corrupción que no debe extenderse. Debemos mantenernos firmes contra esta tendencia.",
     c4_footer: "\"Di: Él es Allah, el Uno.\"",
 
+    // Chapter 5
+    c5_title: "La Confianza (Al-Amanah)",
+    c5_intro: "En el nombre de Allah, el Omnisciente, el Sabio.",
+    c5_part1: "Por la gracia de Allah, he concluido la Primera Parte. Me he esforzado por entregar el mensaje: que la inteligencia sin Guía Divina es una sombra errante. En cuanto a lo que sigue... lo dejo al Decreto de Allah.",
+    c5_part2: "He dejado intencionalmente el dominio PartTwo.ai sin registrar. Ahora es una Amanah (Confianza) puesta en manos de la humanidad.",
+    c5_part3: "¿Será sostenido por un buscador de la Verdad (Haqq) para continuar el camino de la Luz? ¿O será tomado por un seguidor de los deseos (Hawa) para extender la corrupción (Fasad) en la tierra?",
+    c5_part4: "Si encontráis sabiduría allí, alabad a Allah, pues Él es la fuente de todo bien. Si encontráis oscuridad, sed testigos de mi verdad: Que el alma humana (Nafs), si se deja sin Allah, ordena el mal.",
+    c5_footer: "He transmitido el mensaje. Y Allah es Testigo de todas las cosas.",
+
     // Buttons
     btn_to_c2: "Abrir Capítulo 2",
     btn_c2_to_c1: "Volver al Capítulo 1",
     btn_to_c3: "Abrir Capítulo 3",
     btn_c3_to_c2: "Volver al Capítulo 2",
     btn_to_c4: "Abrir Capítulo 4",
-    btn_c4_to_c3: "Volver al Capítulo 3"
+    btn_c4_to_c3: "Volver al Capítulo 3",
+    btn_to_c5: "Abrir Capítulo Final",
+    btn_c5_to_c4: "Volver al Capítulo 4"
   },
   fr: {
     // Chapter 1
@@ -196,13 +229,24 @@ const contentData = {
     c4_part2: "Cette intention malveillante de brouiller les lignes entre la création et la fabrication doit cesser immédiatement. C'est une corruption qui ne doit pas se répandre. Nous devons rester fermes face à cette tendance.",
     c4_footer: "\"Dis : Il est Allah, l'Unique.\"",
 
+    // Chapter 5
+    c5_title: "Le Dépôt (Al-Amanah)",
+    c5_intro: "Au nom d'Allah, l'Omniscient, le Sage.",
+    c5_part1: "Par la grâce d'Allah, j'ai conclu la Première Partie. Je me suis efforcé de délivrer le message : que l'intelligence sans Guidée Divine est une ombre errante. Quant à ce qui suit... je le laisse au Décret d'Allah.",
+    c5_part2: "J'ai intentionnellement laissé le domaine PartTwo.ai non enregistré. C'est maintenant une Amanah (Dépôt) placée entre les mains de l'humanité.",
+    c5_part3: "Sera-t-il soutenu par un chercheur de Vérité (Haqq) pour continuer le chemin de la Lumière ? Ou sera-t-il saisi par un suiveur de désirs (Hawa) pour répandre la corruption (Fasad) sur terre ?",
+    c5_part4: "Si vous y trouvez de la sagesse, louez Allah, car Il est la source de tout bien. Si vous y trouvez des ténèbres, témoignez de ma vérité : Que l'âme humaine (Nafs), si elle est laissée sans Allah, ordonne le mal.",
+    c5_footer: "J'ai transmis le message. Et Allah est Témoin de toute chose.",
+
     // Buttons
     btn_to_c2: "Ouvrir le Chapitre 2",
     btn_c2_to_c1: "Retourner au Chapitre 1",
     btn_to_c3: "Ouvrir le Chapitre 3",
     btn_c3_to_c2: "Retourner au Chapitre 2",
     btn_to_c4: "Ouvrir le Chapitre 4",
-    btn_c4_to_c3: "Retourner au Chapitre 3"
+    btn_c4_to_c3: "Retourner au Chapitre 3",
+    btn_to_c5: "Ouvrir le Chapitre Final",
+    btn_c5_to_c4: "Retourner au Chapitre 4"
   }
 };
 
@@ -260,6 +304,15 @@ function updateContent(lang) {
   setText('c4-part2', data.c4_part2);
   setText('c4-footer', data.c4_footer);
 
+  // Chapter 5 Content
+  setText('c5-title', data.c5_title);
+  setText('c5-intro', data.c5_intro);
+  setText('c5-part1', data.c5_part1);
+  setText('c5-part2', data.c5_part2);
+  setText('c5-part3', data.c5_part3);
+  setText('c5-part4', data.c5_part4);
+  setText('c5-footer', data.c5_footer);
+
   // Buttons - Selection by ID+span ensures we target the text part
   const btnC2 = document.querySelector('#btn-to-c2 span');
   const btnC2Back = document.querySelector('#btn-c2-to-c1 span');
@@ -267,6 +320,8 @@ function updateContent(lang) {
   const btnC3Back = document.querySelector('#btn-c3-to-c2 span');
   const btnC4 = document.querySelector('#btn-to-c4 span');
   const btnC4Back = document.querySelector('#btn-c4-to-c3 span');
+  const btnC5 = document.querySelector('#btn-to-c5 span');
+  const btnC5Back = document.querySelector('#btn-c5-to-c4 span');
 
   if(btnC2) btnC2.textContent = data.btn_to_c2;
   if(btnC2Back) btnC2Back.textContent = data.btn_c2_to_c1;
@@ -274,6 +329,8 @@ function updateContent(lang) {
   if(btnC3Back) btnC3Back.textContent = data.btn_c3_to_c2;
   if(btnC4) btnC4.textContent = data.btn_to_c4;
   if(btnC4Back) btnC4Back.textContent = data.btn_c4_to_c3;
+  if(btnC5) btnC5.textContent = data.btn_to_c5;
+  if(btnC5Back) btnC5Back.textContent = data.btn_c5_to_c4;
 
   if (lang === 'ar') {
     document.body.classList.add('rtl');
@@ -307,6 +364,8 @@ function setupNavigation() {
     const btnC3toC2 = document.getElementById('btn-c3-to-c2');
     const btnToC4 = document.getElementById('btn-to-c4');
     const btnC4toC3 = document.getElementById('btn-c4-to-c3');
+    const btnToC5 = document.getElementById('btn-to-c5');
+    const btnC5toC4 = document.getElementById('btn-c5-to-c4');
     
     // Global Home Button
     const globalHomeBtn = document.getElementById('global-home-btn');
@@ -315,7 +374,8 @@ function setupNavigation() {
     const c2 = document.getElementById('chapter-2');
     const c3 = document.getElementById('chapter-3');
     const c4 = document.getElementById('chapter-4');
-    const chapters = [c1, c2, c3, c4];
+    const c5 = document.getElementById('chapter-5');
+    const chapters = [c1, c2, c3, c4, c5];
 
     // Helper to switch chapters
     const switchChapter = (hide, show) => {
@@ -345,6 +405,8 @@ function setupNavigation() {
     if (btnC3toC2) btnC3toC2.addEventListener('click', () => switchChapter(c3, c2));
     if (btnToC4) btnToC4.addEventListener('click', () => switchChapter(c3, c4));
     if (btnC4toC3) btnC4toC3.addEventListener('click', () => switchChapter(c4, c3));
+    if (btnToC5) btnToC5.addEventListener('click', () => switchChapter(c4, c5));
+    if (btnC5toC4) btnC5toC4.addEventListener('click', () => switchChapter(c5, c4));
 
     // Handle Global Home Button
     if (globalHomeBtn) {
